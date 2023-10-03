@@ -14,3 +14,4 @@ $routes->get('/cart', 'ShoeCollectionController::cart');
 $routes->get('/shop', 'ShoeCollectionController::shop');
 $routes->get('/single-product', 'ShoeCollectionController::singleProd');
 $routes->get('/checkout', 'ShoeCollectionController::checkout');
+$routes->get('singleProduct/(:any)', 'ShoeCollectionController::singleProduct/$1');

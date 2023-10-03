@@ -30,13 +30,8 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="/home" class="nav-link">Home</a></li>
 	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="/shop">Shop</a>
-                <a class="dropdown-item" href="/single-product">Single Product</a>
-                <a class="dropdown-item" href="/cart">Cart</a>
-                <a class="dropdown-item" href="/checkout">Checkout</a>
-              </div>
+              <a class="nav-link" href="/shop"   >Shop</a>
+
             </li>
 	          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>

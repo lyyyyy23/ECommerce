@@ -3,9 +3,17 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ProductModel;
 
 class ShoeCollectionController extends BaseController
 {
+
+    private $shoes;
+
+    function __construct()
+    {
+        $this->shoes = new ProductModel();
+    }
     public function index()
     {
         return view('shoes/home');
@@ -29,7 +37,10 @@ class ShoeCollectionController extends BaseController
     }
     public function shop()
     {
-        return view('shoes/shop');
+        $data =[
+            'products' => $this->shoes->findAll()
+        ];
+        return view('shoes/shop', $data);
     }
     public function singleProd()
     {
@@ -38,5 +49,12 @@ class ShoeCollectionController extends BaseController
     public function checkout()
     {
         return view('shoes/checkout');
+    }
+    public function singleProduct($ID = null)
+    {
+        $data =[
+            'selectedProduct' => $this->shoes->where('productID', $ID)->first()
+        ];
+        return view('shoes/single-product' , $data);
     }
 }
